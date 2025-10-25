@@ -11,7 +11,9 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.Set;
 
+import com.http.Controller.AuthController;
 import com.http.Controller.HomeController;
 import com.http.Model.HttpRequestWrapper;
 import com.http.Model.HttpResponseWrapper;
@@ -69,6 +71,8 @@ public class App
                 HomeController.helloWorldController(req, res, in, out);
             else if("/serverstatus".equals(req.getRequestLine(1)))
                 HomeController.ServerStatus(req, res, in, out);
+            else if("/signin".equals(req.getRequestLine(1)))
+                AuthController.loginController(req, res, in, out);
             else
             {
                 // invalid URI found, send response with 400 Bad Resuest
