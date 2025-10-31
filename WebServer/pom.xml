@@ -48,7 +48,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.http.WebServer.Main</mainClass>
+              <mainClass>com.http.App</mainClass>
             </manifest>
           </archive>
         </configuration>

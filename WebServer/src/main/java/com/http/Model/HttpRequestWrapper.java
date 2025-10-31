@@ -43,6 +43,9 @@ public class HttpRequestWrapper
     {
         return this.body;
     }
+    // No byte[] body storage anymore. Incoming binary payloads are sent as
+    // Base64-encoded strings in `body` and should be decoded by controllers
+    // when needed.
     @Override
     public String toString()
     {        
