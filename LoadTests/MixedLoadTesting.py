@@ -1,0 +1,2 @@
+from UniformLoadTesting import NormalTestUser
+from MediaIntensiveLoadTesting import MediaTestUser
